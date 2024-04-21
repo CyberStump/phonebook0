@@ -79,8 +79,7 @@ def handle_conn( _conn, _conn_count ):
             case 'add':
                 db_add( req_arr[1] )
 
-            case 'src': 
-
+            case 'src':
                 result = db_search( req_arr[1] )
                 responce = pickle.dumps(result)
                 _user.send(responce)
